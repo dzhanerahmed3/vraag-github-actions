@@ -12,7 +12,9 @@ jobs:
       uses: devellany/send-mail@v1.0.2
       with:
         host: smtp.google.com
-        sender: devellany
+        account: ${{secrets.MAIL_ADDRESS}}
+        password: ${{secrets.MAIL_PASSWORD}}          
+        sender: Dzhaner
         from: examencloudsystemenDzhaner@gmail.com
         to: devellay@dico.me
         subject: mail title.
