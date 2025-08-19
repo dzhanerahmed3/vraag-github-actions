@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+    - main
+    - release/*
+jobs:
+  messenger:   
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Send email
+      uses: devellany/send-mailer@v1.0.2
+      with:
+        host: smtp.google.com
+        sender: devellany
+        from: examencloudsystemenDzhaner@gmail.com
+        to: devellay@dico.me
+        subject: mail title.
+        body: your messages.
+        attachments: /tmp/linesofcode
+          
+  
+    
